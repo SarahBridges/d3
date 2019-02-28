@@ -1,0 +1,18 @@
+<html>
+<head>
+  <script src="https://d3js.org/d3.v5.js"></script>
+</head>
+<body>
+  <script type="text/javascript">
+  var createList=function(){
+  var animals = ["Seahorse", "Koala", "Duck", "Emu", "Penguin"];
+  d3.select("body").selectAll("p")
+    .data(animals)
+    .enter()
+    .append("p")
+    .text(function(d){return d;});}
+  </script>
+  
+  <button onclick="createList()" type="button" id="startButton">Click Here to Turn Array to List</button>
+  </body>
+  </html>
